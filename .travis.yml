@@ -5,15 +5,16 @@ env:
   global:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
-before_script: cd src  
+before_script: 
+  - git config --global user.email "$GIT_EMAIL"
+  - git config --global user.name "$GIT_NAME"
+  - cd src  
 script: javac -g ArraySums.java  
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
   - git remote rm origin
   - git remote add origin https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git
-  - git config --global user.name "viperguynaz"
-  - git config --global user.email "viperguynaz@gmail.com"
   - git add -f .
   - git commit -m "add output file"
   - git push -fq  origin master > /dev/null
