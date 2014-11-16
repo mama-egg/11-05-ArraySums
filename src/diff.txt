@@ -8,11 +8,11 @@
 < Col 2 sum = 92
 < Diags: [163, 202]
 ---
-> [[33, 72, 11], [31, 72, 98], [53, 94, 58]]
-> Row 0 sum = 116
-> Row 1 sum = 201
-> Row 2 sum = 205
-> Col 0 sum = 117
-> Col 1 sum = 238
-> Col 2 sum = 167
-> Diags: [163, 136]
+> [[87, 49, 44], [36, 23, 86], [45, 48, 28]]
+> Row 0 sum = 180
+> Row 1 sum = 145
+> Row 2 sum = 121
+> Col 0 sum = 168
+> Col 1 sum = 120
+> Col 2 sum = 158
+> Diags: [138, 112]
