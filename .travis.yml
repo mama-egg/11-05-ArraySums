@@ -6,8 +6,8 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - git config --global user.email "$GIT_EMAIL"
-  - git config --global user.name "$GIT_NAME"
+  - git config --global user.email "viperguynaz@gmail.com"
+  - git config --global user.name "viperguynaz"
   - cd src  
 script: javac -g ArraySums.java  
 after_success: java -cp . ArraySums > output.txt
