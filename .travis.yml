@@ -3,5 +3,5 @@ jdk:
   - oraclejdk7
 script: javac -g src/ArraySums.java  
 after_success:
-  java src/ArraySums 
+  java -cp ./src src/ArraySums 
   
