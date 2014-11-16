@@ -6,10 +6,8 @@ script: javac -g ArraySums.java
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
-  - git remote set-url origin https://viperguynaz:giggles*01@github.com/BASISPhoenix/11-05-ArraySums.git
   - git add .
   - git status
-  - git config user.name "viperguynaz"
   - git commit -m "add output file"
   - git push origin master
 
