@@ -1,15 +1,17 @@
 language: java
 jdk:
   - oraclejdk7
-
+env:
+  global:
+    secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
+    
 before_script: cd src  
 script: javac -g ArraySums.java  
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
-  - git remote set-url origin https://viperguynaz:giggles*01@github.com/BASISPhoenix/11-05-ArraySums.git
   - git config user.name "viperguynaz"
   - git add -f .
   - git commit -m "add output file"
-  - git push -u origin master
+  - git push -fq https://${GH_TOKEN}@github.com/$(TRAVIS_REPO_SLUG).git master > /dev/null
 
