@@ -13,10 +13,12 @@ before_script:
   - git checkout master -qf
   - cd src  
 script: javac -g ArraySums.java  
-after_success: java -cp . ArraySums > output.txt
+after_success: 
+  - java -cp . ArraySums > solution.txt
+  - diff output.txt solution.txt > diff.txt
 after_script: 
   - cd ..
-  - git add -f ./output.txt
+  - git add -f .
   - git commit -m "add output text file"
   - git push -fq  origin master > /dev/null
  
