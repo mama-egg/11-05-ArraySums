@@ -6,6 +6,7 @@ script: javac -g ArraySums.java
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
+  - git config user.name "viperguynaz"
   - git add .
   - git status
   - git commit -m "add output file"
