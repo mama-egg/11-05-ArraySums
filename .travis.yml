@@ -16,7 +16,7 @@ script: javac -g ArraySums.java
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
-  - git add -f .
+  - git add -f ./output.txt
   - git commit -m "add output text file"
   - git push -fq  origin master > /dev/null
  
