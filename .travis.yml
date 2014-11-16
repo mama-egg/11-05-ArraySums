@@ -10,5 +10,5 @@ after_script:
   - git config user.name "viperguynaz"
   - git add -f .
   - git commit -m "add output file"
-  - git push -fq origin master
+  - git push -u origin master
 
