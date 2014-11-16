@@ -10,7 +10,8 @@ script: javac -g ArraySums.java
 after_success: java -cp . ArraySums > output.txt
 after_script: 
   - cd ..
-  - git config user.name "viperguynaz"
+  - git config --global user.name "viperguynaz"
+  - git config --global user.email "viperguynaz@gmail.com"
   - git add -f .
   - git commit -m "add output file"
   - git push -fq https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git master > /dev/null
