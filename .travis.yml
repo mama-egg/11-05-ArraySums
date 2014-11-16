@@ -9,5 +9,5 @@ after_script:
   - git add .
   - git status
   - git commit -m "add output file"
-  - git pull
+  - git push -u origin master
 
