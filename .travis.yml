@@ -10,5 +10,5 @@ after_script:
   - git status
   - git config user.name "viperguynaz"
   - git commit -m "add output file"
-  
+  - git remote set-url origin https://github.com/BASISPhoenix/11-05-ArraySums.git
   - git push origin master
