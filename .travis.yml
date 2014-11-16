@@ -5,9 +5,7 @@ env:
   global:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
-before_script: 
-  - travis encrypt GH_TOKEN="d73adfc8af68c19aadab818670d3999ed4ce75cd" --add
-  - cd src  
+before_script: cd src  
 script: javac -g ArraySums.java  
 after_success: java -cp . ArraySums > output.txt
 after_script: 
