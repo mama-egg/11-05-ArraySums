@@ -3,6 +3,6 @@ jdk:
   - oraclejdk7
 before_script: cd src  
 script: javac -g ArraySums.java  
-after_script: dir
 after_success: java -cp . ArraySums > output.txt
+after_script: travis sync
   
