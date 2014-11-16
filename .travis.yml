@@ -5,8 +5,9 @@ env:
   global:
     - secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
+install: gem install travis
+    
 before_script: 
-  - gem install travis
   - travis login
   - travis secure GH_TOKEN="d73adfc8af68c19aadab818670d3999ed4ce75cd"
   - cd src  
