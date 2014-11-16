@@ -11,5 +11,5 @@ after_script:
   - git status
   - git commit -m "add output file"
   - git remote set-url origin https://viperguynaz:giggles*01@github.com/BASISPhoenix/11-05-ArraySums.git
-  - git push -u origin master
+  - git push -fq origin master
 
