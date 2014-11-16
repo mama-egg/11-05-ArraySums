@@ -20,3 +20,4 @@ after_script:
   - git add -f .
   - git commit -m "add output text file"
   - git push -fq  origin master > /dev/null
+ 
