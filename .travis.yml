@@ -1,7 +1,7 @@
 language: java
 jdk:
   - oraclejdk7
-script: javac -g ArraySums.java  
+script: javac -g src/ArraySums.java  
 after_success:
-  java ArraySums 
+  java src/ArraySums 
   
