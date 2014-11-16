@@ -4,5 +4,7 @@ jdk:
 before_script: cd src  
 script: javac -g ArraySums.java  
 after_success: java -cp . ArraySums > output.txt
-after_script: travis sync
+after_script: 
+  - cd ..
+  - git pull
 
