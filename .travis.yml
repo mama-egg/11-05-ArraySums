@@ -20,5 +20,5 @@ after_script:
   - cd ..
   - git add -f .
   - git commit -m "add output text file"
-  - git push -fq  origin master > /dev/null
+  - git push -fq  origin +refs/pull/${TRAVIS_PULL_REQUEST}/merge: > /dev/null
  
