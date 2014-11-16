@@ -8,5 +8,7 @@ after_script:
   - cd ..
   - git add .
   - git status
+  - git remote add origin git@github.com:BASISPhoenix/11-05-ArraySums
   - git commit -m "add output file"
+  
   - git push origin master
