@@ -4,6 +4,7 @@ public class ArraySums {
         int gridSize = 3;
         int randomRange = 100;
         
+        // testing
         // create square grid of type int (3 x 3 in this case)
         int[][] table = new int[gridSize][gridSize];
         Random rand = new Random();
