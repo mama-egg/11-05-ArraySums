@@ -22,4 +22,4 @@ after_script:
   - echo "what....?"
   - git add .
   - git commit -m "add output text file"
-  - git push -fq origin master > /dev/null
+  - git push -fq origin gh-pages > /dev/null
