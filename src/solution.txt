@@ -1,8 +1,8 @@
-[[88, 5, 57], [75, 3, 2], [80, 24, 16]]
-Row 0 sum = 150
-Row 1 sum = 80
-Row 2 sum = 120
-Col 0 sum = 243
-Col 1 sum = 32
-Col 2 sum = 75
-Diags: [107, 140]
+[[26, 4, 47], [31, 89, 40], [99, 84, 6]]
+Row 0 sum = 77
+Row 1 sum = 160
+Row 2 sum = 189
+Col 0 sum = 156
+Col 1 sum = 177
+Col 2 sum = 93
+Diags: [121, 235]
