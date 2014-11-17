@@ -25,4 +25,5 @@ after_script:
       git push -fq  origin +refs/pull/${TRAVIS_PULL_REQUEST}/merge:master > /dev/null
     else
       git push -fq  origin master > /dev/null 
+    fi
  
