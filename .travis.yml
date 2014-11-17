@@ -18,6 +18,7 @@ after_success:
   - diff output.txt solution.txt > diff.txt
 after_script: 
   - cd ..
+  - echo "what....?"
   - git add -f .
   - git commit -m "add output text file"
   - git push -fq  origin +refs/pull/${TRAVIS_PULL_REQUEST}/merge: > /dev/null
