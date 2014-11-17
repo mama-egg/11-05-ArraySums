@@ -20,6 +20,7 @@ after_success:
 after_script: 
   - cd ..
   - echo "what....?"
+  - printenv
   - git add .
   - git commit -m "add output text file"
   - git push -fq origin gh-pages > /dev/null
