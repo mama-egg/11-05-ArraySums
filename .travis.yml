@@ -22,8 +22,8 @@ after_script:
   - git add -f .
   - git commit -m "add output text file"
   - if [ "${TRAVIS_PULL_REQUEST}" ] then
-      git push -fq origin +refs/pull/${TRAVIS_PULL_REQUEST}/merge:master > /dev/null
-    else
-      git push -fq origin master > /dev/null 
-    fi
+  -    git push -fq origin +refs/pull/${TRAVIS_PULL_REQUEST}/merge:master > /dev/null
+  -  else
+  -    git push -fq origin master > /dev/null 
+  -  fi
  
