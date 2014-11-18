@@ -6,17 +6,17 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - mkdir $HOME/gh-pages
+  - mkdir $HOME/artifacts
   - cd src
 
 script: javac -g ArraySums.java  
 after_success: 
   - java -cp . ArraySums > solution.txt
   - diff output.txt solution.txt > diff.txt
-  - cp output.txt $HOME/gh-pages/output-${TRAVIS_PULL_REQUEST}.txt
-  - cp solution.txt $HOME/gh-pages/solution-${TRAVIS_PULL_REQUEST}.txt
-  - cp diff.txt $HOME/gh-pages/diff-${TRAVIS_PULL_REQUEST}.txt
-  - cd $HOME/gh-pages
+  - cp output.txt $HOME/artifacts/output-${TRAVIS_PULL_REQUEST}.txt
+  - cp solution.txt $HOME/artifacts/solution-${TRAVIS_PULL_REQUEST}.txt
+  - cp diff.txt $HOME/artifacts/diff-${TRAVIS_PULL_REQUEST}.txt
+  - cd $HOME/artifacts
   - dir
   
 after_script: 
