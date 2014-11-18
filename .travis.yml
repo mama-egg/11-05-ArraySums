@@ -13,7 +13,9 @@ after_success:
   - diff output.txt solution.txt > diff.txt
   - dir
 after_script: 
-  - cd ..
-  - git add .
-  - git commit -m "add output text file"
-  - git push -fq origin master > /dev/null
+   - git init
+   - git config user.email "viperguynaz@gmail.com"
+   - git config user.name "viperguynaz"
+   - git add .
+   - git commit -m "Deploy to Github Pages"
+   - git push -fq "https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
