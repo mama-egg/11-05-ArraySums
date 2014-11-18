@@ -10,7 +10,7 @@ before_script:
   - git clone --depth=50 --branch=gh-pages git://github.com/${TRAVIS_REPO_SLUG}.git gh-pages > /dev/null
   - cd gh-pages
   - git checkout -fq gh-pages
-  - cd $Home/${TRAVIS_REPO_SLUG}/src
+  - cd $HOME/${TRAVIS_REPO_SLUG}/src
   
 script: javac -g ArraySums.java  
 after_success: 
@@ -18,7 +18,7 @@ after_success:
   - diff output.txt solution.txt > diff.txt
   - dir
 after_script: 
-   - cd $Home/gh-pages
+   - cd $HOME/gh-pages
    - cp ../${TRAVIS_REPO_SLUG}/src/output.txt output-${TRAVIS_PULL_REQUEST}.txt
    - cp ../${TRAVIS_REPO_SLUG}/src/solution.txt solution-${TRAVIS_PULL_REQUEST}.txt
    - cp ../${TRAVIS_REPO_SLUG}/src/diff.txt diff-${TRAVIS_PULL_REQUEST}.txt
