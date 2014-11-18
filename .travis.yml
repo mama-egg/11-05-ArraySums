@@ -6,7 +6,7 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - echo "Git User: ${GIT_NAME}"
+  - echo "${GIT_NAME}"
   - git config --global user.email "viperguynaz@gmail.com"
   - git config --global user.name "viperguynaz"
   - echo "${TRAVIS_REPO_SLUG}" 
