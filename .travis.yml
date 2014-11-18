@@ -6,6 +6,8 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
+  - git checkout gh-pages
+  - dir 
   - cd src  
 script: javac -g ArraySums.java  
 after_success: 
