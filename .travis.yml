@@ -6,21 +6,23 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - git checkout master:gh-pages
+  - git config --global user.email "viperguynaz@gmail.com"
+  - git config --global user.name "viperguynaz"
+  - echo "${TRAVIS_REPO_SLUG}" 
+  - git remote rm origin
+  - git remote add origin https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git
+  - mkdir pages
+  - cd pages  
+  - git checkout gh-pages
   - dir 
-  - cd src  
+  - cd ../src  
 script: javac -g ArraySums.java  
 after_success: 
   - java -cp . ArraySums > solution.txt
   - diff output.txt solution.txt > diff.txt
   - dir
 after_script: 
-   - mkdir pages
    - cd pages
-   - git init
-   - git config user.email "viperguynaz@gmail.com"
-   - git config user.name "viperguynaz"
-   - git checkout "https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages
    - cp ../output.txt output${TRAVIS_PULL_REQUEST}.txt
    - cp ../soultion.txt solution${TRAVIS_PULL_REQUEST}.txt
    - cp ../diff.txt diff${TRAVIS_PULL_REQUEST}.txt
