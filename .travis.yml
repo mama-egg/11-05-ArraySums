@@ -6,20 +6,18 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - dir
+  - mkdir $HOME/gh-pages
   - cd src
-  - dir
-  
+
 script: javac -g ArraySums.java  
 after_success: 
   - java -cp . ArraySums > solution.txt
   - diff output.txt solution.txt > diff.txt
+  - cp output.txt $HOME/gh-pages/output-${TRAVIS_PULL_REQUEST}.txt
+  - cp solution.txt $HOME/gh-pages/solution-${TRAVIS_PULL_REQUEST}.txt
+  - cp diff.txt $HOME/gh-pages/diff-${TRAVIS_PULL_REQUEST}.txt
+  - cd $HOME/gh-pages
   - dir
+  
 after_script: 
-   - cd $HOME/gh-pages
-   - cp ../${TRAVIS_REPO_SLUG}/src/output.txt output-${TRAVIS_PULL_REQUEST}.txt
-   - cp ../${TRAVIS_REPO_SLUG}/src/solution.txt solution-${TRAVIS_PULL_REQUEST}.txt
-   - cp ../${TRAVIS_REPO_SLUG}/src/diff.txt diff-${TRAVIS_PULL_REQUEST}.txt
-   - dir
-   - git add . 
-   - git commit -m "Deploy to Github Pages"
+   - git status 
