@@ -15,12 +15,13 @@ after_success:
 after_script: 
    - mkdir pages
    - cd pages
+   - git init
    - git config user.email "viperguynaz@gmail.com"
    - git config user.name "viperguynaz"
-   - git init
    - git checkout "https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages
    - cp ../output.txt output${TRAVIS_PULL_REQUEST}.txt
    - cp ../soultion.txt solution${TRAVIS_PULL_REQUEST}.txt
    - cp ../diff.txt diff${TRAVIS_PULL_REQUEST}.txt
+   - dir
    - git add . 
    - git commit -m "Deploy to Github Pages"
