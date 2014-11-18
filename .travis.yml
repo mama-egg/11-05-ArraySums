@@ -13,7 +13,7 @@ script: javac -g ArraySums.java
 after_success: 
   - java -cp . ArraySums > solution.txt
   - diff output.txt solution.txt > diff.txt
-  - cp output.txt $HOME/artifacts/output-${TRAVIS_PULL_REQUEST}.txt
+  - cp output.txt $HOME/artifacts/output.txt
   - cp solution.txt $HOME/artifacts/solution-${TRAVIS_PULL_REQUEST}.txt
   - cp diff.txt $HOME/artifacts/diff-${TRAVIS_PULL_REQUEST}.txt
   
