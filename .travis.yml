@@ -25,8 +25,12 @@ after_script:
   - cd gh-pages
   - git checkout -fq gh-pages
   - mkdir output
-  - cp $HOME/artifacts output
+  - cp $HOME/artifacts/* output
   - dir output
+  - git config --global user.email "viperguynaz@gmail.com"
+  - git config --global user.name "viperguynaz"
+  - git remote rm origin
+  - git remote add origin https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git  
   - git add . 
   - git commit -m "Deploy to Github Pages"
   - git push -fq origin gh-pages > /dev/null
