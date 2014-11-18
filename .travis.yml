@@ -17,6 +17,7 @@ after_script:
    - cd pages
    - git config user.email "viperguynaz@gmail.com"
    - git config user.name "viperguynaz"
+   - git init
    - git checkout gh-pages
    - cp ../output.txt output${TRAVIS_PULL_REQUEST}.txt
    - cp ../soultion.txt solution${TRAVIS_PULL_REQUEST}.txt
