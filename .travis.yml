@@ -8,8 +8,8 @@ env:
 before_script: 
   - cd $HOME
   - git clone --depth=50 --branch=gh-pages git://github.com/${TRAVIS_REPO_SLUG}.git gh-pages > /dev/null
-  - dir gh-pages
-  - git checkout gh-pages
+  - cd gh-pages
+  - git checkout -fq gh-pages
   
 script: javac -g ArraySums.java  
 after_success: 
