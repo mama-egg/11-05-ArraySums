@@ -13,9 +13,14 @@ after_success:
   - diff output.txt solution.txt > diff.txt
   - dir
 after_script: 
-   - git init
+   - mkdir pages
+   - cd pages
    - git config user.email "viperguynaz@gmail.com"
    - git config user.name "viperguynaz"
-   - git add .
+   - git checkout gh-pages
+   - cp ../output.txt output${TRAVIS_PULL_REQUEST}.txt
+   - cp ../soultion.txt solution${TRAVIS_PULL_REQUEST}.txt
+   - cp ../diff.txt diff${TRAVIS_PULL_REQUEST}.txt
+   - git add . 
    - git commit -m "Deploy to Github Pages"
    - git push -fq "https://d73adfc8af68c19aadab818670d3999ed4ce75cd@github.com/${TRAVIS_REPO_SLUG}.git" master:gh-pages > /dev/null 2>&1
