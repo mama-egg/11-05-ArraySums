@@ -16,8 +16,6 @@ after_success:
   - cp output.txt $HOME/artifacts/output-${TRAVIS_PULL_REQUEST}.txt
   - cp solution.txt $HOME/artifacts/solution-${TRAVIS_PULL_REQUEST}.txt
   - cp diff.txt $HOME/artifacts/diff-${TRAVIS_PULL_REQUEST}.txt
-  - cd $HOME/artifacts
-  - dir
   
 after_script: 
   - cd $HOME
@@ -34,4 +32,3 @@ after_script:
   - git add . 
   - git commit -m "Deploy to Github Pages"
   - git push -fq origin gh-pages > /dev/null
-  
