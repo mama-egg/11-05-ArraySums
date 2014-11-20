@@ -6,7 +6,7 @@ env:
     secure: "d73adfc8af68c19aadab818670d3999ed4ce75cd"
     
 before_script: 
-  - echo user.name
+  - echo ${TRAVIS_REPO_SLUG}
   - mkdir $HOME/artifacts
   - cd src
 
